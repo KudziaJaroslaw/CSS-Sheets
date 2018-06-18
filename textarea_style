@@ -1,0 +1,91 @@
+___________________________________________________________________
+HTML
+___________________________________________________________________
+
+<html>
+  </head>
+
+</head>
+<body>
+  <label class='label'>
+    <textarea class='label_input' placeholder='Lorem Ipsum'></textarea>
+      <span class="field_label-wrap">
+        <span class="field_label">Last Name</span>
+      </span>
+  </label>
+    <label class='label'>
+    <textarea class='label_input' placeholder='Lorem Ipsum'></textarea>
+      <span class="field_label-wrap">
+        <span class="field_label">Last awf</span>
+      </span>
+  </label>
+    <label class='label'>
+    <textarea class='label_input' placeholder='Lorem Ipsum'></textarea>
+      <span class="field_label-wrap">
+        <span class="field_label">Last Position</span>
+      </span>
+  </label>
+</body>
+</html>
+
+___________________________________________________________________
+CSS
+___________________________________________________________________
+
+.label {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 1em;
+  font-family: Arial;
+  font-weight: 100;
+  color: #212121;
+  width: 500px;
+}
+textarea {
+  padding: 15px 15px 15px 15px;
+  border: none;
+  border-bottom: 3px solid #e0e0e0;
+  display: block;
+  box-sizing: border-box;
+  height: 50px;
+  width: 25%;
+  resize: none;
+  font-family: arial;
+  overflow: hidden;
+  transition: width 0.7s ease-out;
+  ///#c6ff00
+}
+textarea::placeholder {
+  opacity: 0;
+}
+textarea:focus::placeholder {
+  opacity: 1;
+}
+textarea:focus {
+  border-bottom: 3px solid #ff3d00;
+  width: 100%;
+}
+textarea:focus ~ .field_label-wrap {
+  bottom: 40px;
+}
+textarea:not(:placeholder-shown) ~ .field_label-wrap {
+  opacity: 1;
+  bottom: 40px;
+  width: 100%;
+}
+textarea:not(:placeholder-shown) {
+  width: 100%;
+  border-bottom: 3px solid #ff3d00;
+}
+.field_label-wrap {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  point-events: none;
+  transition: all 0.3s ease-in;
+}
+
+.field_label {
+  point-events: none;
+}
